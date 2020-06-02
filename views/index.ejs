@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link ref="stylessheet" src="/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Data</title>
+</head>
+
+<body>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <figure class="highcharts-figure">
+        <div id="container" data-test=<%= data %>></div>
+       
+
+    </figure>
+    <h3> Final Throughput value AVERAGE for without MIMO Tech : <%= withoutMimoAvg %> </h3>
+
+    <h3>Final Throughput value AVERAGE for with MIMO Tech :<%= withMimoAvg %></h3>
+
+    <figure class="highcharts-figure">
+        <div id="container_2" data-test=<%= data2 %>></div>
+       
+
+    </figure>
+    <script>
+        let data = document.getElementById("container").dataset.test;
+        let data2 = document.getElementById("container_2").dataset.test;
+    </script>
+    <script src="/highchart1.js"></script>
+    <script src="/highchart.js">
+    </script>
+</body>
+
+</html>
