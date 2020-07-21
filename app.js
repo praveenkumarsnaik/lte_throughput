@@ -1,19 +1,17 @@
 const express = require('express');
 const app = express();
 
-const getData = require("./code");
-const port = 8000;
+
+const port = 8001;
 app.set('view engine', 'ejs');
-app.use(express.static('./'))
+
+app.use(express.static('./assets'))
 
 app.get('/', async (req, res) => {
     try {
-        let data = await getData();
+       
         
-        res.render('index.ejs', { data: JSON.stringify(data.throughput) ,
-            data2:JSON.stringify(data.finalAvg),
-            withoutMimoAvg :data.wotavg,
-            withMimoAvg:data.wtavg });
+        res.render('main_design.ejs', {});
         res.send();
     } catch (e) {
         res.send("error");

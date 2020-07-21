@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sangeetha Arts</title>
+    <link rel="shortcut icon" href="symbol.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
+   <!---- <link rel="stylesheet" type="text/css" href="lak.css" media="screen"/>-->
+   
+</head>
+<body>
+    <header>
+
+        <img src="Sangeetha Arts.png" class="logo" width="500" height="100">
+    <div class="main">
+    <ul>
+        <li class="active"><a href="main_design.html"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>
+        <li><a href="aboutus.html"><i class="fa fa-user" aria-hidden="true"></i>About Us</a></li>
+        <li><a href="clients.html"><i class="fa fa-users" aria-hidden="true"></i>Clients</a></li>
+        <li>
+            <div class="dropdown">
+                <a class="dropbtn"><i class="fa fa-phone" aria-hidden="true"></i>Contact</a>
+                <div class="dropdown-content">
+                  <a href="mailto:nslakshman98@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i>Mail</a>
+                  <a href="tel:8197557809"><i class="fa fa-phone" aria-hidden="true"></i>Call</a>
+                  <!--<a href="#">Link 3</a>-->
+                </div>
+              </div>
+        </li>
+    </ul>
+    </div>
+
+        </header>
+
+
+
+
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="sliding_image1.jpeg" style="width:100%">
+  <div class="text slide-up" id="text1" > <h2>Welcome to <br>
+       Sangeetha Arts</h2>
+    <h3> Designs | Prints | Signage </h3>
+    <div class="ppp">
+    <h4 > <a href="mailto:nslakshman98@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i> nslakshman98@gmail.com</a>
+       
+    </div>
+   
+   <div class="lll">
+    <h4><a href="tel:8197557809"><i class="fa fa-phone" aria-hidden="true"></i> 8197557809</a></h4></div>
+</div>
+</div>
+<!--<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="sliding_image2.jpeg" style="width:100%">
+  <div class="text">Caption Two</div>
+</div>-->
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="sliding_image2.jpeg" style="width:100%">
+  <div class="text"></div>
+</div>
+
+<!--<div class="mySlides fade">
+    <div class="numbertext">4 / 4</div>
+    <img src="sliding_image4.jpeg" style="width:100%">
+    <div class="text">Caption Three</div>
+  </div>-->
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <!--<span class="dot" onclick="currentSlide(3)"></span> -->
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+ 
+}
+
+$(document).ready(function(){
+  //$("#text1").slideUp();
+});
+
+</script>
+
+
+
+   
+</script>
+
+
+</body>
+
+
+        
+</body>
+</html>
